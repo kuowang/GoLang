@@ -124,3 +124,28 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 复制代码
 查看Linux go env
 go env
+
+在进行Go语言开发的时候，我们的代码总是会保存在$GOPATH/src目录下。在工程经过go build、go install或go get等指令后，会将下载的第三方包源代码文件放在$GOPATH/src目录下， 产生的二进制可执行文件放在 $GOPATH/bin目录下，生成的中间缓存文件会被保存在 $GOPATH/pkg 下
+
+四种定义方式
+
+定义变量                 var      变量名      变量类型
+
+定义常量                 const  常量名  =  常量值
+
+定义类型                 type    结构体名   (func / interface / struct)
+
+定义方法&函数      func   函数名(){}  /   func (结构体)方法名(){}
+
+
+golang使胞package来管理定义模块,可以使用import关键字来导入使用。
+如果导入的是go自带的包，则会去安装目录$GOROOT/src按包路径加载，如fmt包
+如果是我们go get安装或自定义的包，则会去$GOPATH/src下加载
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+atom.zip : 这是安装包
+
+.atom.zip 是插件包
+    放置：C:\Users\shineyork\.atom 目录下
+
+点击：file->setting->packages 点击插件go系列插件设置 需要注意go-push插件中的Config指定GOPATH运行目录
+
+建议安装之后删除php插件或者配置好;
+
+安装是: file->setting->install
+
+
+ -->> 关于go插件的扩展配置；
+    根据第一次课程的，go/bin下的 所有的.exe放置在你配置好GOPATH/bin下
+    根据第一次课程的，go/src/github.com - google.golang.org - golang.org- gopkg.in - go.uber.org ... 建议全部复制 下的所有的文件放置在你配置好GOPATH/bin下
+
+
+  mac ： 根据第一次课程的，go/src/github.com - google.golang.org - golang.org- gopkg.in - go.uber.org ... 建议全部复制 下的所有的文件放置在你配置好GOPATH/bin下 ; 编辑器会自动生成
+
+  go install github.com/xxx包 => 生成到 go/bin下
