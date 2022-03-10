@@ -143,6 +143,25 @@ golang使胞package来管理定义模块,可以使用import关键字来导入使
 如果是我们go get安装或自定义的包，则会去$GOPATH/src下加载
 
 
+提示异常错误是：exec: "git": executable file not found in %PATH%
+处理方法1：可能是因为git没有安装
+2：可能是go环境变量有问题，下面环境一定要配置。
+    环境变量添加 %GOROOT%\bin
+
+
+
+导入GitHub项目文件 ： go get github.com/shineyork/go-sms
+结果如下：
+PS F:\Go\Golang\src\go2011> go run .\kkk.go
+a.go
+srm class .go
+srm class .go 222
+srm class .go 222222
+srm u .go
+this is sms/email.go init
+main
+this is sms email
+
 
 
 
