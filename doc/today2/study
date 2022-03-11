@@ -1,0 +1,65 @@
+fmt包： 实现了类似C语言printf和scanf的格式化I/O。主要分为向外输出内容和获取输入内容两大部分。
+输出三个函数
+Print(a ...interface{}) (n int, err error)
+Printf(format string, a ...interface{}) (n int, err error)
+Println(a ...interface{}) (n int, err error)
+
+数据输入
+Scanf(format string, a ...interface{}) (n int, err error)
+
+实例：fmt.Scan(&name)
+
+go语言fmt中printf占位符
+    %d  十进制
+    %s  直接输出字符串或者【】byte
+    %q 该值对应双引号括起来的字符串字面值
+    %9.2f 宽度9 精度2 小数浮点数
+    %v 值的默认格式标识
+    %T 打印值的类型
+    %t 布尔 true或者false
+
+GO中的指针
+    &：取地址
+    *：根据地址取值
+
+Go 数组的长度不可改变，在特定场景中这样的集合就不太适用，Go中提供了一种灵活，功能强悍的内置类型切片("动态数组"),与数组相比切片的长度是不固定的，可以追加元素，在追加时可能使切片的容量增大
+
+切片：切片是数组的一个引用，因此切片是引用类型。但自身是结构体，值拷贝传递。
+切片的长度可以改变，因此，切片是一个可变的数组。
+切片遍历方式和数组一样，可以用len()求长度。表示可用元素数量，读写操作不能超过该限制。
+cap可以求出slice最大扩张容量，不能超出数组限制。0 <= len(slice) <= len(array)，其中array是slice引用的数组。
+切片的定义：var 变量名 []类型，比如 var str []string  var arr []int。
+如果 slice == nil，那么 len、cap 结果都等于 0。
+
+
+数组和切片的操作
+S[n]获取元素值
+S[:]从数组s的索引位置0到len(s)-1处获得的切片
+S[low:]从数组s的索引位置low到len(s)-1处获得的切片
+S[:high]从数组s的索引位置0到high处获得的切片
+S[low:high]从数组s的索引位置low到high处获得的切片
+
+切片操作
+len 来求长度
+cap capacity是容量的意思，用于返回某个类型的最大容量（只能用于切片和 map
+append 用来追加元素到数组、slice中,返回修改后的数组、slice
+make 用来分配内存，返回Type本身(只能应用于slice, map, channel)
+copy 用于复制和连接slice，返回复制的数目
+
+
+Map集合
+// 定义map集合
+var goClassMap map[string]string
+goClassMap = make(map[string]string)
+// 或
+// goClassMap := make(map[string]string)
+
+// 添加数据
+goClassMap["teacher"] = "shineyork"
+goClassMap["contents"] = "go"
+fmt.Println(goClassMap)
+
+
+
+
+
